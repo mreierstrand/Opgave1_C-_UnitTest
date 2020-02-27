@@ -7,7 +7,7 @@ namespace ObligatoriskOpgave1
         private string _title;
         private string _forfatter;
         private int _sidetal;
-        private int _isbn;
+        private string _isbn;
 
         public string Title
         {
@@ -25,7 +25,7 @@ namespace ObligatoriskOpgave1
             set { _sidetal = value; }
         }
 
-        public int ISBN
+        public String ISBN
         {
             get { return _isbn; }
             set { _isbn = value; }
