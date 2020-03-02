@@ -25,19 +25,18 @@ namespace ObligatoriskOpgave1
             set { _sidetal = value; }
         }
 
-        public String ISBN
+        public string ISBN
         {
             get { return _isbn; }
             set { _isbn = value; }
         }
 
-        public Bog(string title, string forfatter, int sidetal, int isbn)
+        public Bog(string title, string forfatter, int sidetal, string isbn)
         {
             _title = title;
             _forfatter = forfatter;
             _sidetal = sidetal;
             _isbn = isbn;
         }
-
     }
 }
