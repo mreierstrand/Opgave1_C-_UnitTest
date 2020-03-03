@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObligatoriskOpgave1", "ObligatoriskOpgave1\ObligatoriskOpgave1.csproj", "{0A3CFA0A-B45D-429A-8EAA-8A2E978E218D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObligatoriskOpgave1BogTests", "ObligatoriskOpgave1BogTests\ObligatoriskOpgave1BogTests.csproj", "{0BEE0D63-E599-4D7B-BF1B-9EED852861B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObligatoriskOpgave1BookTests", "ObligatoriskOpgave1BogTests\ObligatoriskOpgave1BookTests.csproj", "{0BEE0D63-E599-4D7B-BF1B-9EED852861B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
