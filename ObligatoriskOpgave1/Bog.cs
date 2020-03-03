@@ -4,25 +4,28 @@ namespace ObligatoriskOpgave1
 {
     public class Bog
     {
-        private string _title;
+        private string _titel;
         private string _forfatter;
         private int _sidetal;
-        private string _isbn;
+        private string _isbn13;
 
-        public string Title
+        public string Titel
         {
-            get { return _title; }
-            set { _title = value; }
+            get { return _titel; }
+            set { _titel = value; }
         }
         public string Forfatter
         {
             get { return _forfatter; }
             set
             {
-                if (_forfatter)
+                if (_forfatter.Length <2 )
                 {
-                    _forfatter = value;
+                    throw new IndexOutOfRangeException("Forfatternavn er for kort");
                 }
+
+                if (_forfatter.Length >= 2)
+                    _forfatter = value;
             }
         }
         public int Sidetal
@@ -42,18 +45,34 @@ namespace ObligatoriskOpgave1
             }
         }
 
-        public string ISBN
+        public string ISBN13
         {
-            get { return _isbn; }
-            set { _isbn = value; }
+            get { return _isbn13; }
+            set
+            {
+                if (_isbn13.Length <13)
+                    throw new Exception("ISBN-nummer er for kort");
+
+                if (_isbn13.Length >13)
+                    throw new Exception("ISBN-Nummer er for langt");
+                else
+                {
+                    _isbn13 = value;
+                }
+            }
         }
 
-        public Bog(string title, string forfatter, int sidetal, string isbn)
+        public Bog(string titel, string forfatter, int sidetal, string isbn13)
         {
-            _title = title;
+            _titel = titel;
             _forfatter = forfatter;
             _sidetal = sidetal;
-            _isbn = isbn;
+            _isbn13 = isbn13;
+        }
+
+        public Bog()
+        {
+
         }
     }
 }
