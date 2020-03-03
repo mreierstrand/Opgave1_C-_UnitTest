@@ -17,12 +17,29 @@ namespace ObligatoriskOpgave1
         public string Forfatter
         {
             get { return _forfatter; }
-            set { _forfatter = value; }
+            set
+            {
+                if (_forfatter)
+                {
+                    _forfatter = value;
+                }
+            }
         }
         public int Sidetal
         {
             get { return _sidetal; }
-            set { _sidetal = value; }
+            set
+            {
+                if (_sidetal >= 4 && _sidetal <= 1000)
+                {
+                    _sidetal = value;
+                }
+                if (_sidetal < 4)
+                    throw new Exception("Sideantallet er for småt");
+                
+                if (_sidetal > 1000)
+                    throw new Exception("Sideantallet er for stort");
+            }
         }
 
         public string ISBN
