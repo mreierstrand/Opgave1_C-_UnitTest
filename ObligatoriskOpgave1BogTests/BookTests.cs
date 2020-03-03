@@ -74,11 +74,16 @@ namespace ObligatoriskOpgave1.BogTests
         {
             _book.NoOfPages = 1001;
         }
-
         [TestMethod]
         public void BookISBNTest()
         {
             _book.ISBN13 = "1234567891011";
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void BookNoOfPagesOutOfRangeNullException()
+        {
+            _book.ISBN13 = null;
         }
 
         [TestMethod]

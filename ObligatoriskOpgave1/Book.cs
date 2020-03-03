@@ -15,6 +15,7 @@ namespace ObligatoriskOpgave1
             get { return _title; }
             set
             {
+                //
                 if (value == null) throw new NullReferenceException();
                 _title = value;
             }
@@ -36,8 +37,8 @@ namespace ObligatoriskOpgave1
             get { return _noOfPages; }
             set
             {
-                if (value <= 4) throw new ArgumentOutOfRangeException();
-                if (value >= 1000) throw new ArgumentOutOfRangeException();
+
+                if (value <= 4 || value >=1000 ) throw new ArgumentOutOfRangeException();
                 _noOfPages = value;
             }
         }
@@ -47,7 +48,7 @@ namespace ObligatoriskOpgave1
             get { return _isbn13; }
             set
             {
-                _isbn13 = value;
+                if (value == null) throw new ArgumentNullException();
                 if (value.Length == 13) _isbn13 = value;
                 else if (value.Length != 13) throw new ArgumentOutOfRangeException();
             }
