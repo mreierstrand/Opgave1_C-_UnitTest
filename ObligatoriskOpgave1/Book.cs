@@ -28,7 +28,7 @@ namespace ObligatoriskOpgave1
             {
                 if (value == null) throw new NullReferenceException();
                 if (value.Length < 2) throw new ArgumentOutOfRangeException();
-                _title = value;
+                _author = value;
             }
         }
 
@@ -56,10 +56,10 @@ namespace ObligatoriskOpgave1
 
         public Book(string title, string author, int noOfPages, string isbn13)
         {
-            _title = title;
-            _author = author;
-            _noOfPages = noOfPages;
-            _isbn13 = isbn13;
+            Title = title;
+            Author = author;
+            NoOfPages = noOfPages;
+            ISBN13 = isbn13;
         }
     }
 }
